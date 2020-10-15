@@ -1,12 +1,12 @@
-package homework_3;
+package homework_3_4;
 
-import homework_3.aircrafts.Aircraft;
-import homework_3.aircrafts.cargo.Quadrocopter;
-import homework_3.aircrafts.cargo.QuadrocopterModel;
-import homework_3.aircrafts.passenger.Helicopter;
-import homework_3.aircrafts.passenger.HelicopterModel;
-import homework_3.aircrafts.passenger.Plane;
-import homework_3.aircrafts.passenger.PlaneModel;
+import homework_3_4.aircrafts.Aircraft;
+import homework_3_4.aircrafts.cargo.Quadrocopter;
+import homework_3_4.aircrafts.cargo.QuadrocopterModel;
+import homework_3_4.aircrafts.passenger.Helicopter;
+import homework_3_4.aircrafts.passenger.HelicopterModel;
+import homework_3_4.aircrafts.passenger.Plane;
+import homework_3_4.aircrafts.passenger.PlaneModel;
 
 import java.util.ArrayList;
 

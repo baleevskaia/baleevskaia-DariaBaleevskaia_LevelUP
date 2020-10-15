@@ -1,4 +1,4 @@
-package homework_3.aircrafts.cargo;
+package homework_3_4.aircrafts.cargo;
 
 public class Quadrocopter extends CargoAircraft {
     private QuadrocopterModel model;

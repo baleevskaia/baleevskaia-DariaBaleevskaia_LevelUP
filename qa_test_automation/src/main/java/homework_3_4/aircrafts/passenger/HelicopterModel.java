@@ -1,4 +1,4 @@
-package homework_3.aircrafts.passenger;
+package homework_3_4.aircrafts.passenger;
 
 public enum HelicopterModel {
     ROBINSON_R44,

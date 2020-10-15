@@ -1,4 +1,4 @@
-package homework_3.aircrafts.cargo;
+package homework_3_4.aircrafts.cargo;
 
 public enum QuadrocopterModel {
     DJI_MAVIC_AIR,

@@ -1,6 +1,6 @@
-package homework_3.aircrafts.cargo;
+package homework_3_4.aircrafts.cargo;
 
-import homework_3.aircrafts.Aircraft;
+import homework_3_4.aircrafts.Aircraft;
 
 public abstract class CargoAircraft extends Aircraft {
 

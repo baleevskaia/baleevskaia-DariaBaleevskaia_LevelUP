@@ -1,4 +1,4 @@
-package homework_3.aircrafts.passenger;
+package homework_3_4.aircrafts.passenger;
 
 public class Helicopter extends PassengerAircraft {
     private HelicopterModel model;

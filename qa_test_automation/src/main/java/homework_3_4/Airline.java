@@ -1,7 +1,7 @@
-package homework_3;
+package homework_3_4;
 
-import homework_3.aircrafts.Aircraft;
-import homework_3.aircrafts.passenger.PassengerAircraft;
+import homework_3_4.aircrafts.Aircraft;
+import homework_3_4.aircrafts.passenger.PassengerAircraft;
 
 import java.util.ArrayList;
 import java.util.Collections;
