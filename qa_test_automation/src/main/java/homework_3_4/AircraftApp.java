@@ -7,6 +7,8 @@ import homework_3_4.aircrafts.passenger.Helicopter;
 import homework_3_4.aircrafts.passenger.HelicopterModel;
 import homework_3_4.aircrafts.passenger.Plane;
 import homework_3_4.aircrafts.passenger.PlaneModel;
+import homework_3_4.exceptions.airlineExceptions.AirlineException;
+import homework_3_4.exceptions.searchExceptions.SearchException;
 
 import java.util.ArrayList;
 
@@ -38,6 +40,38 @@ public class AircraftApp {
         ArrayList<Aircraft> matchingAircrafts = airline.findAircraft(5, 10500, 5950);
         for (Aircraft aircraft : matchingAircrafts) {
             aircraft.print();
+        }
+
+        // Test exceptions:
+        // InvalidParameterException:
+        try {
+            airline.findAircraft(-5, 10500, 5950);
+        } catch (SearchException e){
+            System.out.println(e);
+        }
+
+        // AircraftNotFoundException:
+        try {
+            airline.findAircraft(5, 10500, 10000000);
+        } catch (SearchException e){
+            System.out.println(e);
+        }
+
+        // NoPassengerAircraftsException:
+        try {
+            Airline noPassengersAirline = new Airline("NotSoSuperAirline");
+            noPassengersAirline.addAircraft(new Quadrocopter(QuadrocopterModel.DJI_MAVIC_AIR, 10, 10, 2018));
+            noPassengersAirline.getFullPassengersCapacity();
+        } catch (AirlineException e){
+            System.out.println(e);
+        }
+
+        // EmptyFleetException:
+        try {
+            Airline emptyFleetAirline = new Airline("NotSuperAtAllAirline");
+            emptyFleetAirline.sortFleet();
+        } catch (AirlineException e){
+            System.out.println(e);
         }
     }
 }
