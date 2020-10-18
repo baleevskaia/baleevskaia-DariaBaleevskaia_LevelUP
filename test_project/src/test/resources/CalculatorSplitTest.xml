@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="CalculatorTest">
+
+    <test name="SumMultTest">
+        <classes>
+            <class name="homework_5.calculatorTestSet.CalculatorSumMultiTest"></class>
+        </classes>
+    </test>
+
+    <test name="SubDivTest">
+        <classes>
+            <class name="homework_5.calculatorTestSet.CalculatorSumMultiTest"></class>
+        </classes>
+    </test>
+
+</suite>
