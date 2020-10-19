@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="CalculatorTrigSuiteTest">
+
+    <test name="TrigTest">
+        <classes>
+            <class name="homework_5.calculatorTestSet.CalculatorTrigonometricTest">
+                <methods>
+                    <include name="calculatorCosDoubleTest"/>
+                    <include name="calculatorSinDoubleTest"/>
+                    <include name="calculatorTgDoubleTest"/>
+                    <include name="calculatorCtgDoubleTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>

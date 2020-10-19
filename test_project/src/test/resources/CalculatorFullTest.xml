@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="CalculatorFullTest">
+
+    <test name="FullTest">
+        <classes>
+            <class name="homework_5.calculatorTestSet.CalculatorSumMultTest"></class>
+            <class name="homework_5.calculatorTestSet.CalculatorSubDivTest"></class>
+            <class name="homework_5.calculatorTestSet.CalculatorTrigonometricTest"></class>
+            <class name="homework_5.calculatorTestSet.CalculatorOtherOperationsTest"></class>
+        </classes>
+    </test>
+</suite>

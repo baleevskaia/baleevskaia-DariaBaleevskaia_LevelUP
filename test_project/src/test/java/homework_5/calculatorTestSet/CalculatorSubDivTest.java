@@ -43,28 +43,28 @@ public class CalculatorSubDivTest extends BaseCalculatorTest {
 
     @Test(dataProvider = "subDoubleDataProvider")
     public void calculatorSubDoubleTest(double a, double b, double expected) {
-        System.out.println("Calculator SumDouble Test Run...");
+        System.out.println("Calculator SubDouble Test Run...");
         double actual = calculator.sub(a, b);
         Assert.assertEquals(actual, expected, 0.00000001);
     }
 
     @Test(dataProvider = "subLongDataProvider")
     public void calculatorSubLongTest(long a, long b, long expected) {
-        System.out.println("Calculator SumDouble Test Run...");
+        System.out.println("Calculator SubLong Test Run...");
         long actual = calculator.sub(a, b);
         Assert.assertEquals(actual, expected, 0.00000001);
     }
 
     @Test(dataProvider = "divDoubleDataProvider")
     public void calculatorDivDoubleTest(double a, double b, double expected) {
-        System.out.println("Calculator SumDouble Test Run...");
+        System.out.println("Calculator DivDouble Test Run...");
         double actual = calculator.div(a, b);
         Assert.assertEquals(actual, expected, 0.00000001);
     }
 
     @Test(dataProvider = "divLongDataProvider")
     public void calculatorDivLongTest(long a, long b, long expected) {
-        System.out.println("Calculator SumDouble Test Run...");
+        System.out.println("Calculator DivLong Test Run...");
         long actual = calculator.div(a, b);
         Assert.assertEquals(actual, expected, 0.00000001);
     }
