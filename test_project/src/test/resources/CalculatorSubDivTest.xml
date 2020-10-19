@@ -1,0 +1,28 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="CalculatorSubDivSuiteTest">
+
+    <test name="Sub tests">
+        <classes>
+            <class name="homework_5.calculatorTestSet.CalculatorSubDivTest">
+                <methods>
+                    <include name="calculatorSubDoubleTest"/>
+                    <include name="calculatorSubLongTest"/>
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+
+    <test name="Div tests">
+        <classes>
+            <class name="homework_5.calculatorTestSet.CalculatorSubDivTest">
+                <methods>
+                    <include name="calculatorDivDoubleTest"/>
+                    <include name="calculatorDivLongTest"/>
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+
+</suite>

@@ -3,13 +3,14 @@
 
     <test name="SumMultTest">
         <classes>
-            <class name="homework_5.calculatorTestSet.CalculatorSumMultiTest"></class>
+            <class name="homework_5.calculatorTestSet.CalculatorSumMultTest"></class>
         </classes>
     </test>
 
     <test name="SubDivTest">
         <classes>
-            <class name="homework_5.calculatorTestSet.CalculatorSumMultiTest"></class>
+            <class name="homework_5.calculatorTestSet.CalculatorSumMultTest"></class>
+
         </classes>
     </test>
 

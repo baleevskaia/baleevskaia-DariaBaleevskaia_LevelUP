@@ -1,0 +1,28 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="CalculatorSumMultSuiteTest">
+
+    <test name="Sum tests">
+        <classes>
+            <class name="homework_5.calculatorTestSet.CalculatorSumMultTest">
+                <methods>
+                    <include name="calculatorSumDoubleTest"/>
+                    <include name="calculatorSumLongTest"/>
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+
+    <test name="Mult tests">
+        <classes>
+            <class name="homework_5.calculatorTestSet.CalculatorSumMultTest">
+                <methods>
+                    <include name="calculatorMultDoubleTest"/>
+                    <include name="calculatorMultLongTest"/>
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+
+</suite>

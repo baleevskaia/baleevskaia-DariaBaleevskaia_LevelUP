@@ -4,7 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.*;
 import ru.levelup.qa.at.calculator.Calculator;
 
-public class CalculatorSumMultiTest {
+public class BaseCalculatorTest {
 
     protected Calculator calculator;
 
@@ -19,12 +19,6 @@ public class CalculatorSumMultiTest {
         calculator = new Calculator();
     }
 
-    @Test
-    public void calculatorSumTest1() {
-        System.out.println("Calculator Sum Test Run...");
-        double actual = calculator.sum(2.0, 2.0);
-        Assert.assertEquals(actual, 4.0, 0.00000001);
-    }
 
     @AfterMethod
     public void tearDownTestMethod() {
@@ -36,5 +30,4 @@ public class CalculatorSumMultiTest {
     public void tearDownSuite(){
         System.out.println("Tear down Test Suite");
     }
-
 }
