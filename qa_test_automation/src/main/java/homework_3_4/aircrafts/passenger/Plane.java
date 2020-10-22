@@ -1,6 +1,4 @@
-package homework_3.aircrafts.passenger;
-
-import homework_3.aircrafts.passenger.PassengerAircraft;
+package homework_3_4.aircrafts.passenger;
 
 public class Plane extends PassengerAircraft {
     private PlaneModel model;

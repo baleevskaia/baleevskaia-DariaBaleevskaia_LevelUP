@@ -1,6 +1,6 @@
-package homework_3.aircrafts.passenger;
+package homework_3_4.aircrafts.passenger;
 
-import homework_3.aircrafts.Aircraft;
+import homework_3_4.aircrafts.Aircraft;
 
 public abstract class PassengerAircraft extends Aircraft {
     private int passengerCapacity;
