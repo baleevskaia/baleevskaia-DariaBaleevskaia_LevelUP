@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="CalculatorOtherOperationsSuiteTest">
+
+    <test name="OtherOperationsTest">
+        <classes>
+            <class name="homework_5.calculatorTestSet.CalculatorOtherOperationsTest">
+                <methods>
+                    <include name="calculatorIsNegativeTest"/>
+                    <include name="calculatorIsPositiveTest"/>
+                    <include name="calculatorPowTest"/>
+                    <include name="calculatorSqrtTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>
