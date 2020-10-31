@@ -19,15 +19,25 @@ import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElem
 public class Exercise1 extends BaseTest {
 
     @DataProvider
-    public Object[][] emailSubject() {
-        String subject = "Новое письмо " + java.util.UUID.randomUUID().toString();
+    public Object[][] email() {
+        String emailSubject = "Новое письмо " + java.util.UUID.randomUUID().toString();
+
         return new Object[][]{
-                {subject}
+                {emailSubject}
         };
     }
 
+    public boolean isElementPresent(By locatorKey) {
+        try {
+            driver.findElement(locatorKey);
+            return true;
+        } catch (org.openqa.selenium.NoSuchElementException e) {
+            return false;
+        }
+    }
 
-    @Test (dataProvider = "emailSubject")
+
+    @Test(dataProvider = "email")
     public void loginPositive(String emailSubject) {
 
         login(username, myPwd);
@@ -58,18 +68,36 @@ public class Exercise1 extends BaseTest {
         WebElement closeComposeWindow = driver.findElement(By.cssSelector("button.container--2lPGK[title='Закрыть']"));
         closeComposeWindow.click();
 
-        WebElement draftsFolder = driver.findElement(By.partialLinkText("Черновики"));
+        WebElement draftsFolder = wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Черновики")));
         draftsFolder.click();
 
         WebElement lastDraftSubject = driver.findElement(By.partialLinkText(emailSubject));
         lastDraftSubject.click();
+        WebElement toWhomRes = driver.findElement(By.cssSelector("span.text--1tHKB"));
+        WebElement textFieldRes = driver.findElement(By.cssSelector("div.cke_editable > div:first-child > div:first-child > div:first-child> div:first-child> div:first-child"));
+        //Verify контент, адресата и тему письма
+        Assert.assertTrue(lastDraftSubject.getText().contains(emailSubject) && toWhomRes.getText().contains("dmatveeva@gmail.com") && textFieldRes.getText().contentEquals("Тест#1"));
 
+        WebElement sendButton = driver.findElement(By.cssSelector("span.button2[title='Отправить']"));
+        sendButton.click();
+
+        WebElement closeSend = driver.findElement(By.cssSelector("span.button2_has-ico[title='Закрыть']"));
+        closeSend.click();
+        wait.until(ExpectedConditions.stalenessOf(lastDraftSubject));
+
+        //Verify, что письмо исчезло из черновиков
+        Assert.assertFalse(isElementPresent(By.partialLinkText(emailSubject)));
+
+        WebElement sentFolder = wait.until(ExpectedConditions.elementToBeClickable(By.partialLinkText("Отправленные")));
+        sentFolder.click();
+        //Verify, что письмо появилось в папке отправленные
+        Assert.assertTrue(isElementPresent(By.partialLinkText(emailSubject)));
+
+        WebElement logoutButton = wait.until(ExpectedConditions.elementToBeClickable(By.partialLinkText("выход")));
+        logoutButton.click();
         
-//        WebElement lastDraftSubject = driver.findElement(By.xpath("//*[@id='app-canvas']/div/div[1]/div[1]/div/div[2]/div[2]/div/div/div[1]/div/div/div[1]/div/div/div/a[2]/div[4]/div/div[3]/span[1]/span"));
-//        Assert.assertTrue(lastDraftToWhom.getText().contains("dmatveeva@gmail.com") && lastDraftSubject.getText().contains("Тестовое письмо"));
     }
 
-//*[@id="app-canvas"]/div/div[1]/div[1]/div/div[2]/div[2]/div/div/div[1]/div/div/div[1]/div/div/div/a[2]/div[4]/div/div[1]/span
 }
 
 
