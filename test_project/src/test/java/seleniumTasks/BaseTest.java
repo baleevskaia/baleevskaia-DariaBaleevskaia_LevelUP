@@ -33,8 +33,8 @@ public class BaseTest {
 
         driver = new ChromeDriver();
 
-        wait = new WebDriverWait(driver, 10);
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        wait = new WebDriverWait(driver, 15);
+        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         driver.manage().window().maximize();
         driver.get("https://mail.ru/");
     }

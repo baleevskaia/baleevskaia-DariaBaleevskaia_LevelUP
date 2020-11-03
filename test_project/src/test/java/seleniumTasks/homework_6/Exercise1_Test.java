@@ -16,7 +16,7 @@ import java.util.concurrent.TimeUnit;
 
 import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElementLocated;
 
-public class Exercise1 extends BaseTest {
+public class Exercise1_Test extends BaseTest {
 
     @DataProvider
     public Object[][] email() {
@@ -38,17 +38,17 @@ public class Exercise1 extends BaseTest {
 
 
     @Test(dataProvider = "email")
-    public void loginPositive(String emailSubject) {
+    public void draftSent(String emailSubject) {
 
         login(username, myPwd);
         WebElement errorBox = driver.findElement(By.id("mailbox:error"));
         Assert.assertFalse(errorBox.getText().contains("Неверное имя или пароль"));
 
 
-        WebElement newEmail = wait.until(visibilityOfElementLocated(By.partialLinkText("Написать письмо")));
+        WebElement newEmail = wait.until(ExpectedConditions.elementToBeClickable(By.partialLinkText("Написать письмо")));
         newEmail.click();
 
-        WebElement toWhom = driver.findElement(By.cssSelector("div.contacts--1ofjA input.container--H9L5q"));
+        WebElement toWhom = wait.until(visibilityOfElementLocated(By.cssSelector("div.contacts--1ofjA input.container--H9L5q")));
         toWhom.clear();
         toWhom.sendKeys("dmatveeva@gmail.com");
 
