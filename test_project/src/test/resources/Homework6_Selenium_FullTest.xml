@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Homework6FullTest">
+
+    <test name="FullTest">
+        <classes>
+            <class name="seleniumTasks.homework_6.Exercise1_Test"></class>
+            <class name="seleniumTasks.homework_6.Exercise2_Test"></class>
+            <class name="seleniumTasks.homework_6.Exercise3_Test"></class>
+        </classes>
+    </test>
+</suite>

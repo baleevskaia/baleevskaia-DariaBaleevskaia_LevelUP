@@ -24,6 +24,17 @@
 
     </properties>
 
+    <profiles>
+        <profile>
+            <id>homework6-test</id>
+            <properties>
+                <suite.name>${project.basedir}/src/test/resources/Homework6_Selenium_FullTest.xml</suite.name>
+               <!-- <browser.name>IE</browser.name>-->
+            </properties>
+        </profile>
+    </profiles>
+
+
     <dependencies>
         <!-- Test NG -->
         <dependency>
@@ -48,6 +59,13 @@
             <version>${selenium-java.version}</version>
         </dependency>
 
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>4.2.2</version>
+            <scope>test</scope>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -70,7 +88,8 @@
                 <configuration>
                     <!--<skipTests>true</skipTests>-->
                     <suiteXmlFiles>
-                        <suiteXmlFile>${project.basedir}/src/test/resources/CalculatorFullTest.xml</suiteXmlFile>
+                       <!-- <suiteXmlFile>${project.basedir}/src/test/resources/CalculatorFullTest.xml</suiteXmlFile> -->
+                        <suiteXmlFile>${project.basedir}/src/test/resources/Homework6_Selenium_FullTest.xml</suiteXmlFile>
                         <!--                        <suiteXmlFile>${project.basedir}/src/test/resources/CalculatorTrigSuiteTest.xml</suiteXmlFile>-->
                         <!--                        <suiteXmlFile>${project.basedir}/src/test/resources/CalculatorSumMultSuiteTest.xml</suiteXmlFile>-->
                         <!--                        <suiteXmlFile>${project.basedir}/src/test/resources/CalculatorSubDivSuiteTest.xml</suiteXmlFile>-->
